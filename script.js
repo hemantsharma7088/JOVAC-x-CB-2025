@@ -1,11 +1,12 @@
 function getUser() {
   const username = document.getElementById("username").value.trim();
-  const url = `https://api.github.com/users/hemantsharma7088`;
-
+  
   if (!username) {
     alert("Please enter a GitHub username");
     return;
   }
+
+  const url = https://api.github.com/users/${username};
 
   fetch(url)
     .then(response => {
@@ -21,5 +22,5 @@ function getUser() {
     .catch(error => {
       alert("GitHub user not found");
       document.getElementById("result").style.display = "none";
-    });
+    });
 }
